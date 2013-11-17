@@ -1,0 +1,14 @@
+{% extends "layout/base.html" %}
+{% load static from staticfiles %}
+{% block container %}
+    {% include "components/_navbar.html" %}
+    <div class="container">
+    <div class="minor-page">
+        <h2 class="title">Gracias Por Registrar a tu equipo en el hackaton, los esperamos en el evento..</h2>
+        <hr>
+        <a href="{% url 'root' %}" class="btn btn-success btn-lg">
+            Volver
+        </a>
+    </div>
+    </div>
+{% endblock container %}

@@ -1,0 +1,99 @@
+{% extends "layout/base.html" %}
+{% load static from staticfiles %}
+{% block title %}Developers{% endblock title %}
+{% block extrahead %}
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<style>
+		body{
+			font-family: 'Raleway', sans-serif;
+		}
+		a {
+			text-decoration: none;
+		}
+		#contenedor{
+			color: white;
+			padding: 20px;
+			width: 800px;
+			margin: 30px auto;
+			border-radius: 10px;
+			background-color: #272822;
+			height: 650px;
+		}
+		#contenedor p, img{
+			vertical-align: top;
+			display: inline-block;
+		}
+		#contenedor p{
+			float: left;
+			width: 60%;
+			margin: 3%;
+		}
+		#contenedor img{
+			width: 25%;
+		}
+		#contenedor #nombre{
+			font-size: 23px;
+			display: block;
+			padding: 10px;
+		}
+		#contenedor img{
+			border-radius: 5px;
+		}
+		#contenedor div{
+			margin: 30px;
+		}
+		#contenedor ul{
+			width: 90%;
+			text-align: center;
+			border-radius: 5px;
+			background-color: #47A447;
+			margin-bottom: 40px;
+			float: right;
+		}
+		#contenedor ul li{
+			display: inline-block;
+			vertical-align: top;
+			margin: 10px;
+			transition: 0.5s ease all;
+		}
+		#contenedor ul li a{
+			color: white;
+			font-weight: 800;
+		}
+
+		.rosa{
+			color: #F92672;
+		}
+	</style>
+{% endblock extrahead %}
+{% block container %}
+	{% include "components/_navbar.html" %}
+	<div id="contenedor">
+		<div>
+			<p>
+				<span id="nombre">&lt;<span class="rosa">name</span>&gt; Victor Aguilar &lt;<span class="rosa">name</span>/&gt;</span>
+				"No importa lo estupendamente que haya ido la demo en los ensayos, cuando lo haces frente a tu audiencia la probabilidad de que sea una presentación existosa es inversamente proporcional al número de personas mirando, elevado a la cantidad de dinero que hay en juego"
+				<br>-- Mark Gibbs
+			</p>
+			<img src="{% static 'img/victor.jpg' %}" width="130" alt="">
+			<ul>
+				<li><a href="https://www.facebook.com/jvacx">facebook</a></li>
+				<li><a href="https://twitter.com/jvacx">twitter</a></li>
+				<li><a href="https://github.com/jvacx">github</a></li>
+			</ul>
+		</div>
+		<div >
+			<img src="{% static 'img/hernan.jpg' %}" width="130" alt="">
+			<p>
+				<span id="nombre">&lt;<span class="rosa">name</span>&gt; Hernan Rengel &lt;<span class="rosa">name</span>/&gt;</span>
+				"La mayoría del software actual es muy parecido a una pirámide egipcia, con millones de ladrillos puestos unos encima de otros sin una estructura integral, simplemente realizada a base de fuerza bruta y miles de esclavos"
+				<br>-- Alan Kay
+			</p>
+			<ul>
+				<li><a href="">facebook</a></li>
+				<li><a href="">twitter</a></li>
+				<li><a href="">github</a></li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

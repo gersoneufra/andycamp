@@ -1,0 +1,220 @@
+{% extends "layout/base.html" %}
+{% load static from staticfiles %}
+{% block extrahead %}
+    <style>
+        th, tr, td {
+
+            text-align: center;
+        }
+        tr > td { width: 60px; }
+        tr td:first-child { font-weight: bold; }
+        tr:nth-child(2n) { background-color: #efefef; }
+        tr.head td {
+            font-size: 14px;
+            color: #2e2e2e;
+            font-family: 'Roboto Regular';
+            text-transform: uppercase;
+        }
+        tr.main-head {
+            background-color: #2ac56c;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+{% endblock extrahead %}
+{% block container %}
+    {% include "components/_navbar.html" %}
+    <div class="container">
+    <div class="minor-page">
+
+        <h2 class="title">Cronograma de Actividades</h2><hr>
+            <div class="list-group">
+
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Charlas</h4>
+                    <p class="list-group-item-text">1 hora </p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Talleres</h4>
+                    <p class="list-group-item-text">1 hora ( 45 min  y 15 min de preguntas)</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Hackathon </h4>
+                    <p class="list-group-item-text">Sábado 16:00 al Domingo 15:00 </p>
+                </a>
+            </div><hr>
+        <h3>Sabado 19</h3>
+        <table class="table table-bordered">
+            <tr class="main-head">
+                <td></td>
+                <td colspan="4">CHARLAS</td>
+                <td colspan="2">TALLERES</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">Sala A2</td>
+                <td colspan="2">formARTE</td>
+                <td colspan="2">LabDigital - Sala de patas</td>
+            </tr>
+            <tr class="head">
+                <td>Hora</td>
+                <td>Tema</td>
+                <td>Expositor</td>
+                <td>Tema</td>
+                <td>Expositor</td>
+                <td>Tema</td>
+                <td>Expositor</td>
+            </tr>
+            <tr>
+                <td>9:00 - 10:00</td>
+                <td>Inaguración</td>
+                <td>Comunidad Android Bolivia</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:00</td>
+                <td>Android-x86</td>
+                <td>Mauricio Nuñez</td>
+                <td></td>
+                <td></td>
+                <td rowspan="2">Primeros pasos para desarrollar en Android</td>
+                <td rowspan="2">Comunidad Android Bolivia</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12:00 - 14:00</td>
+                <td colspan="6">RECESO</td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:00</td>
+                <td>Lo bonito, lo feo, lo bueno y lo malo de nuestra relación con los dispositivos móviles</td>
+                <td>Christian Cvander - Mejorando la web</td>
+                <td>Cosas que no sabia acerca de mi Android</td>
+                <td>Davor Limachi</td>
+                <td rowspan="2">Desarrollo de Juegos</td>
+                <td rowspan="2">Javier Garzon Aparicio</td>
+            </tr>
+            <tr>
+                <td>15:00 - 16:00</td>
+                <td>Android Push Notifications using Google Cloud Messaging (GCM)</td>
+                <td>Sergio Mejía (TierConnet, Inc.)</td>
+                <td>7 tips de productividad, 7 herramientas y 7 motivos para crear una app</td>
+                <td>Daniel Alvarez</td>
+            </tr>
+            <tr>
+                <td>16:00 - 17:00</td>
+                <td>Inicio del HACKATHON</td>
+                <td>Comunidad Android Bolivia</td>
+                <td>Modelos de negocio para aplicaciones móviles Android</td>
+                <td>Jared López</td>
+                <td rowspan="2">Buenas prácticas con Arduino</td>
+                <td rowspan="2">Gonzalo Miranda</td>
+            </tr>
+            <tr>
+                <td>17:00 - 18:00</td>
+                <td></td>
+                <td></td>
+                <td>Mesa Redonda</td>
+                <td>Comunidad Android Bolivia</td>
+            </tr>
+            <tr>
+                <td>18:00 - 20:00</td>
+                <td colspan="6">RECESO</td>
+            </tr>
+        </table>
+
+        <hr/>
+        <h3>Domingo 20</h3>
+        <table class="table table-bordered">
+            <tr class="main-head">
+                <td></td>
+                <td colspan="4">CHARLAS</td>
+                <td colspan="2">TALLERES</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">Sala A2</td>
+                <td colspan="2">formARTE</td>
+                <td colspan="2">LabDigital - Sala de patas</td>
+            </tr>
+            <tr class="head">
+                <td>Hora</td>
+                <td>Tema</td>
+                <td>Expositor</td>
+                <td>Tema</td>
+                <td>Expositor</td>
+                <td>Tema</td>
+                <td>Expositor</td>
+            </tr>
+            <tr>
+                <td>9:00 - 10:00</td>
+                <td>Por que no hacer videojuegos para android</td>
+                <td>Vinicius DSL</td>
+                <td>Conectividad NFC</td>
+                <td>Alain Rodrigo Ramos</td>
+                <td rowspan="2">Realidad Aumentada</td>
+                <td rowspan="2">Gustavo Lizarraga</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:00</td>
+                <td>Nuestra primera app con HTML5 + PhoneGap</td>
+                <td>Yan Arlex Vallejo Rosas</td>
+                <td>Android Design</td>
+                <td>Daniella Garcia</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:00</td>
+                <td>El Hardware detrás de Android, realidades y perspectivas.</td>
+                <td>Gonzalo Miranda</td>
+                <td>Invasión zombie al mundo de Android</td>
+                <td>Jose Moruno Cadima</td>
+                <td>Localización en móviles con openstreetmap y google maps</td>
+                <td>Davor Limachi</td>
+            </tr>
+            <tr>
+                <td>12:00 - 14:00</td>
+                <td colspan="6">RECESO</td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:00</td>
+                <td>Google glass</td>
+                <td>Marcelo Zambrana Villarroel</td>
+                <td>Aplicación android para conexion inalámbrica a robot hexapodo mediante tecnología bluethooth</td>
+                <td>Albert y David SCEII (Potosí)</td>
+                <td rowspan="2">Desarrollando Aplicaciones HTML5 para Android</td>
+                <td rowspan="2">Edwin Marcelo Guzmán - (TierConnet, Inc.)</td>
+            </tr>
+            <tr>
+                <td>15:00 - 16:00</td>
+                <td>Premiación del HACKATHON</td>
+                <td>Comunidad Android Bolivia</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16:00 - 17:00</td>
+                <td>FIN DEL EVENTO / MESA REDONDA</td>
+                <td>Comunidad Android Bolivia</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+        <a href="{% url 'root' %}" class="btn btn-success btn-lg">
+            Volver
+        </a>
+
+    </div>
+    </div>
+{% endblock container %}

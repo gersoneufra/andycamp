@@ -1,0 +1,33 @@
+{% extends "layout/base.html" %}
+{% load static from staticfiles %}
+{% block title %}Registro de Equipos{% endblock title %}
+{% block extrahead %}
+    <style>
+        h2.title {
+            font-family: 'Roboto Thin', Helvetica !important;
+            font-size: 35px;
+            margin: 50px 0 20px 0;
+            text-align: center;
+        }
+        .jump-line {
+            margin-bottom: 25px !important;
+        }
+    </style>
+{% endblock %}
+{% block container %}
+    {% include "components/_navbar.html" %}
+    <div class="row">
+        <div class="container">
+            <div class="col-md-3"></div>
+            <div class="col-md-7">
+                <h2 class="title">Registra tu equipo para participar en el hackaton</h2 class="title">
+                <form action="" class="register-form" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button class="btn btn-lg btn-success btn-block" type="submit">Registrar Equipo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% include "components/_footer.html" %}
+{% endblock container %}

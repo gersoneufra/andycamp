@@ -1,0 +1,71 @@
+{% load static from staticfiles %}
+<!-- SLIDER -->
+<div id="da-slider" class="da-slider">
+    <div class="da-slide">
+        <h2>Android Bolivia</h2>
+        <p>
+            Desarrolladores, profesionales, iniciantes, amantes de la tecnología Android y tecnologías relacionadas.
+        <p/>
+        <a href="{% url 'cronogram' %}" class="da-link">Leer mas</a>
+        <div class="da-img"><img src="{% static 'img/logo.png' %}" width="300" alt="Android Bolivia" /></div>
+    </div>
+    <div class="da-slide">
+        <h2>Android Camp</h2>
+        <p>
+            <strong> El 1er campamento más grande de Android en Bolivia.</strong> <br/>
+            <strong> Ven participa , aprende y comparte. </strong>
+        </p>
+        <a href="{% url 'cronogram' %}" class="da-link">Leer mas</a>
+        <div class="da-img"><img src="{% static 'img/logo.png' %}" width="300" alt="Camp" /></div>
+    </div>
+    <div class="da-slide">
+        <h2>Charlas</h2>
+        <p>
+            En AndroidCamp se expondrán charlas con expositores nacionales e internacionales. ¿Te interesarán?, 
+            solo tienes que registrarte y aprenderás cosas que te ayudarán mucho al momento de Desarrollar un App 
+            en Android. Además podrás enterarte de características muy interesantes que tienen tu Smartphone  y 
+            curiosidades que te servirán para sacarle el máximo rendimiento a tu Android.
+        </p>
+        <a href="{% url 'cronogram' %}" class="da-link">Leer mas</a>
+        <div class="da-img"><img src="{% static 'img/juegos2.png' %}" alt="Charlas" /></div>
+    </div>
+    <div class="da-slide">
+        <h2>Talleres</h2>
+        <p>
+            Ven y participa de los talleres, son para ti, podrás realizar prácticas de distintos temas de 
+            desarrollo en Android, tanto de Software como en hardware. Podrás resolver tus dudas con expertos en el 
+            Área.
+        </p>
+        <a href="{% url 'cronogram' %}" class="da-link">Leer mas</a>
+        <div class="da-img"><img src="{% static 'img/talleres2.png' %}" alt="Talleres" /></div>
+    </div>
+    <div class="da-slide">
+        <h2>Hackathon</h2>
+        <p>
+            ¿Quieres probar tu potencial para el desarrollo en Android? entonces debes participar del Hackathon 
+            de apps Android que constará de una dia completo de programación extrema, con un límite de 3 personas 
+            por equipo y ganar premios por el esfuerzo.
+        </p>
+        <a href="{% url 'cronogram' %}" class="da-link">Leer mas</a>
+        <div class="da-img"><img src="{% static 'img/hackaton2.png' %}" alt="Hackathon" /></div>
+    </div>
+    <div class="da-slide">
+        <h2>Concurso de Juegos y Papertoys</h2>
+        <p>
+            Ven al campamento y diviértete con concurso de juegos como ser: Angrybirds, Minios, etc. También si sabes 
+            realizar PaperToys (muñecos en papel) en forma de Android puedes ganarte premios. Si eres músico y quisiera 
+            tocar alguna canción solamente con instrumentos musicales en tu Tablet y/o SmartPhone (o en equipo) puedes 
+            concursar del Android Band.
+        </p>
+        <a href="{% url 'cronogram' %}" class="da-link">Leer mas</a>
+        <div class="da-img"><img src="{% static 'img/juegos2.png' %}" alt="Juegos" /></div>
+    </div>
+    <nav class="da-arrows">
+        <span class="da-arrows-prev">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+        </span>
+        <span class="da-arrows-next">
+            <i class="glyphicon glyphicon-chevron-right"></i>
+        </span>
+    </nav>
+</div><!-- END SLIDER -->

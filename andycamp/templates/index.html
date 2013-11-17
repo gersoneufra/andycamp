@@ -1,0 +1,118 @@
+{% extends "layout/base.html" %}
+{% load static from staticfiles %}
+{% block title %}Android Camp | Bolivia 2013{% endblock title %}
+{% block container %}
+<div id="loading">
+    <h3>CARGANDO..</h3>
+</div>
+    {% include "components/_navbar.html" %}
+    {% include "components/_slider.html" %}
+    <div class="line-dashed"></div>
+    <!-- CONTAINER -->
+    <div class="container">
+        {% include "components/_about_us.html" %}
+        {% include "components/_about_event.html" %}
+
+        <!-- REGISTER FORM -->
+        <a name="registro"></a>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="minor-page">
+                    <h2 class="title">Registrate</h2>
+                    <h3 class="title-description">el evento será en Cochabamba</h3>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <form action="" class="register-form" method="POST">
+                                {% csrf_token %}
+                                {{ form }}
+                                <label class="alert alert-warning minor-alert">Llene sus datos correctamente por favor</label>
+                                <button class="btn btn-lg btn-success btn-block" type="submit">Registrar</button>
+                                <a href="{% url 'hackaton' %}" class="btn btn-lg btn-info btn-block">Registra a tu Equipo en el hackaton</a>
+                            </form>
+                        </div>
+                        <div class="col-lg-7">
+                            <div id="map-container">
+                                <div id="map-support"></div>
+                            </div>
+                            <!--
+                            <img src="" alt="Lugar del Android Camp" class="event-map">
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- END REGISTER FORM -->
+
+        <!-- CONTACT -->
+        <a name="contactos"></a>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="minor-page">
+                    <h2 class="title text-right">Contactanos</h2>
+                    <h3 class="title-description text-right">¿Tienes dudas?, escribenos</h3>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row"><br><br>
+                                <div class="col-xs-3 col-md-3">
+                                    <a href="https://www.facebook.com/android.bo">
+                                        <img class="zocial facebook" src="{% static 'img/facebook.png' %}" alt="Facebook">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3 col-md-3">
+                                    <a href="https://twitter.com/android_bolivia">
+                                        <img class="zocial twitter" src="{% static 'img/twitter.png' %}" alt="Twitter">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3 col-md-3">
+                                    <a href="https://plus.google.com/u/0/communities/100312409440889783858">
+                                        <img class="zocial googleplus" src="{% static 'img/googleplus.png' %}" alt="Gplus">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 col-md-3">
+                                    <a href="https://plus.google.com/u/0/b/103467762730288668837/103467762730288668837/posts">
+                                        <img class="zocial bitbucket" src="{% static 'img/bitbucket.png' %}" alt="Bitbucket">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3 col-md-3">
+                                    <a href="https://github.com/organizations/androidbo">
+                                        <img class="zocial github" src="{% static 'img/github.png' %}" alt="Github">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3 col-md-3">
+                                    <a href="http://www.youtube.com/user/AndroidBolivia">
+                                        <img class="zocial youtube" src="{% static 'img/youtube.png' %}" alt="Youtube">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <form id="contact-form" action="" class="register-form" method="POST">
+                                <input id="name" type="text" class="form-control" placeholder="Nombre completo" autofocus="">
+                                <input id="email" type="email" class="form-control" placeholder="Correo Electronico" autofocus="">
+                                <label class="label-message" for="message">Tu mensaje :</label>
+                                <textarea  id="message" class="form-control" rows="3" id="message" cols="30"></textarea>
+                                <button id="send" class="btn btn-lg btn-success btn-block" type="submit">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END CONTACT -->
+        {% include "components/_partners.html" %}
+    </div><!-- END CONTAINER -->
+    {% include "components/_modals.html" %}
+    {% include "components/_footer.html" %}
+<!-- Analitics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44164516-1', 'androidbolivia.org');
+      ga('send', 'pageview');
+    </script>
+{% endblock container %}

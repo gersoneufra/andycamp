@@ -1,0 +1,34 @@
+{% load static from staticfiles %}
+<!-- NAVBAR -->
+<div class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'root' %}">
+                <img src="{% static 'img/andy.png' %}" alt="Android Camp 2013 - Cochabamba Bolivia">
+                Android Camp
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="{% url 'root' %}">Inicio</a></li>
+                <li><a href="{% url 'root' %}#nosotros">Nosotros & El evento</a></li>
+                <li><a href="{% url 'root' %}#registro">Registrate</a></li>
+                <li><a href="{% url 'hackaton' %}#registro">Hackaton</a></li>
+                <li><a href="{% url 'cronogram' %}">Cronograma</a></li>
+                <li><a href="{% url 'root' %}#contactos">Contactos</a></li>
+                <li><a href="{% url 'root' %}#partners">Auspiciadores</a></li>
+                <!--
+                <li><a href="{% url 'credits' %}">Creditos</a></li>
+                <li><a href="#">Acerca Del AndroidCamp</a></li>
+                -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+

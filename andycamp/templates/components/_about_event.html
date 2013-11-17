@@ -1,0 +1,44 @@
+{% load static from staticfiles %}
+<!-- ABOUT EVENT -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="minor-page">
+            <h2 class="title">Acerca del Evento</h2>
+            <h3 class="title-description">Ven y participa de:</h3>
+            <div class="row camp-activities">
+                <div class="col-md-3 camp-activity one">
+                    <h3>Charlas</h3>
+                    <p><img src="{% static 'img/charlas.png' %}" alt=""></p>
+                    <p class="desc">
+                        Entérate de novedades del desarrollo para Android.
+                    </p>
+                    <a data-toggle="modal"  class="btn btn-default" href="#PanelCharlas">Más detalles »</a>
+                </div>
+                <div class="col-md-3 camp-activity two">
+                    <h3>Talleres</h3>
+                    <p><img src="{% static 'img/talleres.png' %}" alt=""></p>
+                    <p class="desc">
+                        Talleres prácticos para desarrollar aplicaciones.
+                    </p>
+                    <a data-toggle="modal"  class="btn btn-default" href="#PanelTalleres">Más detalles »</a>
+                </div>
+                <div class="col-md-3 camp-activity three">
+                    <h3>Hackathon</h3>
+                    <p><img src="{% static 'img/hackaton.png' %}" alt=""></p>
+                    <p class="desc">
+                        Desarrolla una aplicación en un día, será extremo.
+                    </p>
+                    <a data-toggle="modal"  class="btn btn-default" href="#PanelHackaton">Más detalles »</a>
+                </div>
+                <div class="col-md-3 camp-activity four">
+                    <h3>Juegos</h3>
+                    <p><img src="{% static 'img/juegos.jpg' %}" alt=""></p>
+                    <p class="desc">
+                        Participa de los concursos, los juegos y más.
+                    </p>
+                    <a data-toggle="modal"  class="btn btn-default" href="#PanelJuegos">Más detalles »</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- ABOUT EVENT -->

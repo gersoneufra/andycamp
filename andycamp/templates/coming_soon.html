@@ -1,0 +1,38 @@
+{% extends "layout/base.html" %}
+{% load static from staticfiles %}
+{% block title %}Página en Construcción{% endblock title %}
+{% block extrahead %}
+    <style>
+        .not-found {
+            display: block;
+            height: auto;
+            margin: 30px auto;
+            width: 360px;
+        }
+        .not-found  h2 {
+            font-size: 100px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .not-found  h3 {
+            text-align: center;
+        }
+        .not-found  img {
+            opacity: .6;
+            margin: 30px 0;
+        }
+        .not-found  a {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+{% endblock %}
+{% block container %}
+    {% include "components/_navbar.html" %}
+    <div class="not-found">
+        <h2>Espera...</h2>
+        <h3>Esta página esta en construcción</h3>
+        <img src="{% static 'img/not-found.jpg' %}" alt="">
+        <a href="{% url 'root' %}" class="btn btn-success btn-block">Volver</a>
+    </div>
+{% endblock container %}

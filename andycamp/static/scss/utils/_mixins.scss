@@ -1,0 +1,10 @@
+@mixin grayscale($percent){
+	-webkit-filter: grayscale($percent);
+    -moz-filter: grayscale($percent);
+    -ms-filter: grayscale($percent);
+    -o-filter: grayscale($percent);
+    filter: grayscale($percent);
+     @if $percent == 0% {
+    	filter: none;
+  	}
+}

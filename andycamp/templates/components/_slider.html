@@ -1,0 +1,72 @@
+{% load static from staticfiles %}
+<div id="slider" class="sl-slider-wrapper">
+	<div class="sl-slider">
+		<div class="sl-slide bg-5" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+			<div class="sl-slide-inner">
+				<img src="{% static 'img/logo.png' %}" alt="Juegos" class="deco">
+				<h2>Android Bolivia</h2>
+				<blockquote>
+					<p>Desarrolladores, profesionales, iniciantes, amantes de la tecnología Android y tecnologías relacionadas.</p>
+					<cite>Android Camp 2013</cite>
+				</blockquote>
+			</div>
+		</div>
+		<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+			<div class="sl-slide-inner">
+				<img src="{% static 'img/slide1.png' %}" alt="Charlas" class="deco">
+				<h2>Charlas</h2>
+				<blockquote>
+					<p>Ven y asiste a charlas con expositores nacionales e internacionales. solo tienes que registrarte y ser parte de esta gran aventura.</p>
+					<cite>Android Camp 2013</cite>
+				</blockquote>
+			</div>
+		</div>
+
+		<div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+			<div class="sl-slide-inner">
+				<img src="{% static 'img/slide2.png' %}" alt="Talleres" class="deco">
+				<h2>Talleres</h2>
+				<blockquote>
+					<p>Participa en los talleres, donde podrás realizar prácticas en vivo y resolver tus dudas con expertos en el área</p>
+					<cite>Android Camp 2013</cite>
+				</blockquote>
+			</div>
+		</div>
+
+		<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+			<div class="sl-slide-inner">
+				<img src="{% static 'img/slide3.png' %}" alt="Talleres" class="deco">
+				<h2>Hackathon</h2>
+				<blockquote>
+					<p>Ven y pon a prueba tu potencial, tu temple y tus habilidades desarrollando una aplicación con límite de tiempo, en equipos y por premios.</p>
+					<cite>Android Camp 2013</cite>
+				</blockquote>
+			</div>
+		</div>
+
+		<div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+			<div class="sl-slide-inner">
+				<img src="{% static 'img/slide4.png' %}" alt="Juegos" class="deco">
+				<h2>Juegos</h2>
+				<blockquote>
+					<p>Divierteté jugando Angrybirds, paper toys o tocando en el android band, por premios</p>
+					<cite>Android Camp 2013</cite>
+				</blockquote>
+			</div>
+		</div>
+	</div><!-- /sl-slider -->
+
+	<nav id="nav-arrows" class="nav-arrows">
+		<span class="nav-arrow-prev">Previous</span>
+		<span class="nav-arrow-next">Next</span>
+	</nav>
+
+	<nav id="nav-dots" class="nav-dots">
+		<span class="nav-dot-current"></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</nav>
+
+</div><!-- /slider-wrapper -->
